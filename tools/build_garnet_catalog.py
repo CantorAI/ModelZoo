@@ -126,7 +126,10 @@ def main() -> None:
             for name, part_bytes, part_hash in built_parts:
                 url = (
                     f"https://github.com/{args.repository}/releases/download/"
-                    f"{quote(tag, safe='')}/{quote(name, safe='._-')}"
+                    # Keep tag separators literal. cpp-httplib follows GitHub's
+                    # cross-host asset redirect correctly for slash tags, while
+                    # an already escaped tag can be escaped a second time.
+                    f"{quote(tag, safe='/')}/{quote(name, safe='._-')}"
                 )
                 parts.append({"url": url, "size_bytes": part_bytes, "sha256": part_hash})
             files.append({

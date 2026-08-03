@@ -24,6 +24,15 @@ and verifies each complete SHA-256 digest.
 Use `tools/build_garnet_catalog.py --help` to prepare assets and
 `tools/sign_catalog.py --help` to create the detached Ed25519 signature.
 
+## Optional acceleration packages
+
+`tools/build_acceleration_pack.py` assembles a Windows, NVIDIA-SM-specific
+stored ZIP and emits its catalog entry. The tool requires an explicit approved
+redistribution-license file and never uploads or signs artifacts. Combine the
+entries into `catalog/accelerations-v1.json`, sign it with the normal catalog
+signer, and publish the ZIPs as release assets only after CUDA and TensorRT
+redistribution rights have been confirmed.
+
 ## Licensing
 
 Catalog metadata and repository tooling are Apache-2.0. Every model entry

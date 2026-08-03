@@ -45,10 +45,15 @@ def latest_snapshot(cache_root: Path, model_id: str) -> Path:
 
 def source_files(snapshot: Path, xmodel_root: Path):
     for path in sorted(snapshot.rglob("*")):
-        if path.is_file():
+        if path.is_file() and path.name not in {".gitattributes", "README.md"}:
             yield path, path.relative_to(snapshot).as_posix()
     for path in sorted(xmodel_root.rglob("*")):
-        if path.is_file() and not path.name.startswith("debug_"):
+        if (
+            path.is_file()
+            and "__pycache__" not in path.parts
+            and path.suffix != ".pyc"
+            and not path.name.startswith("debug_")
+        ):
             yield path, f"xmodel/{path.relative_to(xmodel_root).as_posix()}"
 
 

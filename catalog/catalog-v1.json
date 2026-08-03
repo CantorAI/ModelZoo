@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "generated_at": "2026-08-03T04:50:06.260106Z",
+  "generated_at": "2026-08-03T04:54:15.056964Z",
   "models": [
     {
       "id": "Qwen3-VL-2B-Instruct",
@@ -509,7 +509,7 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 1892066152
+        "weights_bytes": 1892003151
       },
       "license": {
         "spdx": "Apache-2.0",
@@ -517,18 +517,6 @@
       },
       "release_tag": "garnet/asr/qwen3-asr-0.6b/v1.0.0",
       "files": [
-        {
-          "path": ".gitattributes",
-          "size_bytes": 1519,
-          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Fasr%2Fqwen3-asr-0.6b%2Fv1.0.0/.gitattributes.part-001-of-001",
-              "size_bytes": 1519,
-              "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
-            }
-          ]
-        },
         {
           "path": "chat_template.json",
           "size_bytes": 1161,
@@ -602,18 +590,6 @@
           ]
         },
         {
-          "path": "README.md",
-          "size_bytes": 57456,
-          "sha256": "5058416891bc47a2051557765997e8c42f8eb78a0e33c3e775bd17d4b0ba4d50",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Fasr%2Fqwen3-asr-0.6b%2Fv1.0.0/README.md.part-001-of-001",
-              "size_bytes": 57456,
-              "sha256": "5058416891bc47a2051557765997e8c42f8eb78a0e33c3e775bd17d4b0ba4d50"
-            }
-          ]
-        },
-        {
           "path": "tokenizer.json",
           "size_bytes": 11429653,
           "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
@@ -646,18 +622,6 @@
               "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Fasr%2Fqwen3-asr-0.6b%2Fv1.0.0/vocab.json.part-001-of-001",
               "size_bytes": 2776833,
               "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/__pycache__/audio_encoder.cpython-312.pyc",
-          "size_bytes": 4026,
-          "sha256": "2715e25d7e09f7529cfce930c7f50edeab9c4f19e9065fd6ffbc37c3f288f414",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Fasr%2Fqwen3-asr-0.6b%2Fv1.0.0/xmodel_2F__pycache___2Faudio_encoder.cpython-312.pyc.part-001-of-001",
-              "size_bytes": 4026,
-              "sha256": "2715e25d7e09f7529cfce930c7f50edeab9c4f19e9065fd6ffbc37c3f288f414"
             }
           ]
         },
@@ -744,7 +708,7 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 2498408782
+        "weights_bytes": 2498404000
       },
       "license": {
         "spdx": "Apache-2.0",
@@ -752,18 +716,6 @@
       },
       "release_tag": "garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0",
       "files": [
-        {
-          "path": ".gitattributes",
-          "size_bytes": 1519,
-          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Ftts%2Fqwen3-tts-12hz-0.6b-customvoice%2Fv1.0.0/.gitattributes.part-001-of-001",
-              "size_bytes": 1519,
-              "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
-            }
-          ]
-        },
         {
           "path": "config.json",
           "size_bytes": 4908,
@@ -821,18 +773,6 @@
               "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Ftts%2Fqwen3-tts-12hz-0.6b-customvoice%2Fv1.0.0/preprocessor_config.json.part-001-of-001",
               "size_bytes": 127,
               "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119"
-            }
-          ]
-        },
-        {
-          "path": "README.md",
-          "size_bytes": 3263,
-          "sha256": "1e3adeecc7a72d6756fdb77c2847f8e994195e105b51206a7a5c049b0dfa48a8",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Ftts%2Fqwen3-tts-12hz-0.6b-customvoice%2Fv1.0.0/README.md.part-001-of-001",
-              "size_bytes": 3263,
-              "sha256": "1e3adeecc7a72d6756fdb77c2847f8e994195e105b51206a7a5c049b0dfa48a8"
             }
           ]
         },
@@ -1003,7 +943,7 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 4520239775
+        "weights_bytes": 4520180410
       },
       "license": {
         "spdx": "Apache-2.0",
@@ -1011,18 +951,6 @@
       },
       "release_tag": "garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0",
       "files": [
-        {
-          "path": ".gitattributes",
-          "size_bytes": 1519,
-          "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Ftts%2Fqwen3-tts-12hz-1.7b-customvoice%2Fv1.0.0/.gitattributes.part-001-of-001",
-              "size_bytes": 1519,
-              "sha256": "11ad7efa24975ee4b0c3c3a38ed18737f0658a5f75a0a96787b576a78a023361"
-            }
-          ]
-        },
         {
           "path": "config.json",
           "size_bytes": 4908,
@@ -1085,18 +1013,6 @@
               "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Ftts%2Fqwen3-tts-12hz-1.7b-customvoice%2Fv1.0.0/preprocessor_config.json.part-001-of-001",
               "size_bytes": 127,
               "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119"
-            }
-          ]
-        },
-        {
-          "path": "README.md",
-          "size_bytes": 57846,
-          "sha256": "64f65e809b51cc0c35f393fbbfcc2d735c0cb3fdbbc6f3fdc4a5e6ce55e9d088",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet%2Ftts%2Fqwen3-tts-12hz-1.7b-customvoice%2Fv1.0.0/README.md.part-001-of-001",
-              "size_bytes": 57846,
-              "sha256": "64f65e809b51cc0c35f393fbbfcc2d735c0cb3fdbbc6f3fdc4a5e6ce55e9d088"
             }
           ]
         },

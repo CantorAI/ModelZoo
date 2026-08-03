@@ -22,7 +22,7 @@ def main() -> None:
     )
     signature = private_key.sign(args.catalog.read_bytes())
     encoded = base64.urlsafe_b64encode(signature).decode("ascii").rstrip("=")
-    output.write_text(encoded + "\n", encoding="ascii")
+    output.write_text(encoded + "\n", encoding="ascii", newline="\n")
     print(f"Wrote {output}")
 
 

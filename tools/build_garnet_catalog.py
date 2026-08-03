@@ -7,6 +7,7 @@ import hashlib
 import json
 import os
 import shutil
+import zipfile
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import quote
@@ -57,6 +58,10 @@ def source_files(snapshot: Path, xmodel_root: Path):
             yield path, f"xmodel/{path.relative_to(xmodel_root).as_posix()}"
 
 
+def is_weight(relative: str) -> bool:
+    return relative.lower().endswith(".safetensors")
+
+
 def safe_asset_name(relative: str, part_index: int, part_count: int) -> str:
     encoded = quote(relative, safe="._-").replace("%", "_")
     return f"{encoded}.part-{part_index:03d}-of-{part_count:03d}"
@@ -68,7 +73,11 @@ def write_parts(source: Path, asset_dir: Path, relative: str, part_size: int):
     parts = []
     with source.open("rb") as input_stream:
         for index in range(1, part_count + 1):
-            name = safe_asset_name(relative, index, part_count)
+            name = (
+                quote(relative, safe="._-").replace("%", "_")
+                if part_count == 1
+                else safe_asset_name(relative, index, part_count)
+            )
             output = asset_dir / name
             digest = hashlib.sha256()
             remaining = min(part_size, size - ((index - 1) * part_size))
@@ -82,6 +91,20 @@ def write_parts(source: Path, asset_dir: Path, relative: str, part_size: int):
                     remaining -= len(block)
             parts.append((name, output.stat().st_size, digest.hexdigest()))
     return parts
+
+
+def write_runtime_archive(entries, asset_dir: Path):
+    archive_path = asset_dir / "xmodel.zip"
+    with zipfile.ZipFile(archive_path, "w", compression=zipfile.ZIP_STORED) as archive:
+        for source, relative in entries:
+            archive.write(source, relative)
+    return {
+        "path": "xmodel.zip",
+        "format": "zip",
+        "size_bytes": archive_path.stat().st_size,
+        "sha256": sha256(archive_path),
+        "url": None,
+    }
 
 
 def main() -> None:
@@ -115,8 +138,17 @@ def main() -> None:
         if asset_dir.exists():
             shutil.rmtree(asset_dir)
         asset_dir.mkdir(parents=True)
-        files = []
-        for source, relative in source_files(snapshot, manifest_path.parent):
+        entries = list(source_files(snapshot, manifest_path.parent))
+        runtime_entries = [entry for entry in entries if not is_weight(entry[1])]
+        archive = write_runtime_archive(runtime_entries, asset_dir)
+        archive["url"] = (
+            f"https://github.com/{args.repository}/releases/download/"
+            f"{quote(tag, safe='/')}/xmodel.zip"
+        )
+        weights = []
+        for source, relative in entries:
+            if not is_weight(relative):
+                continue
             size = source.stat().st_size
             if size == 0:
                 continue
@@ -132,7 +164,7 @@ def main() -> None:
                     f"{quote(tag, safe='/')}/{quote(name, safe='._-')}"
                 )
                 parts.append({"url": url, "size_bytes": part_bytes, "sha256": part_hash})
-            files.append({
+            weights.append({
                 "path": relative,
                 "size_bytes": size,
                 "sha256": complete_hash,
@@ -143,10 +175,12 @@ def main() -> None:
             "model_id": model_id,
             "version": VERSION,
             "tag": tag,
-            "files": files,
+            "xmodel": archive,
+            "weights": weights,
         }
         (asset_dir / "release-manifest.json").write_text(
-            json.dumps(release_manifest, indent=2) + "\n", encoding="utf-8"
+            json.dumps(release_manifest, indent=2) + "\n",
+            encoding="utf-8", newline="\n"
         )
         catalog_models.append({
             "id": model_id,
@@ -154,15 +188,16 @@ def main() -> None:
             "display_name": manifest["display_name"],
             "capability": capability,
             "runtime": {"minimum_version": "0.1.0"},
-            "requirements": {"weights_bytes": sum(item["size_bytes"] for item in files)},
+            "requirements": {"weights_bytes": sum(item["size_bytes"] for item in weights)},
             "license": {
                 "spdx": "Apache-2.0",
                 "upstream": f"https://huggingface.co/Qwen/{model_id}",
             },
             "release_tag": tag,
-            "files": files,
+            "xmodel": archive,
+            "weights": weights,
         })
-        print(f"Prepared {model_id}: {len(files)} files in {asset_dir}")
+        print(f"Prepared {model_id}: xmodel.zip + {len(weights)} weight files in {asset_dir}")
 
     catalog = {
         "schema_version": 1,
@@ -171,7 +206,9 @@ def main() -> None:
         "models": catalog_models,
     }
     args.catalog.parent.mkdir(parents=True, exist_ok=True)
-    args.catalog.write_text(json.dumps(catalog, indent=2) + "\n", encoding="utf-8")
+    args.catalog.write_text(
+        json.dumps(catalog, indent=2) + "\n", encoding="utf-8", newline="\n"
+    )
     print(f"Wrote {args.catalog} with {len(catalog_models)} models")
 
 

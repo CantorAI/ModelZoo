@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "channel": "stable",
-  "generated_at": "2026-08-03T04:54:15.056964Z",
+  "generated_at": "2026-08-03T06:18:41.393983Z",
   "models": [
     {
       "id": "Qwen3-VL-2B-Instruct",
@@ -12,62 +12,21 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 4266676590
+        "weights_bytes": 4255140312
       },
       "license": {
         "spdx": "Apache-2.0",
         "upstream": "https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct"
       },
       "release_tag": "garnet/vlm/qwen3-vl-2b-instruct/v1.0.0",
-      "files": [
-        {
-          "path": "chat_template.json",
-          "size_bytes": 5502,
-          "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/chat_template.json.part-001-of-001",
-              "size_bytes": 5502,
-              "sha256": "6f8a6a55027e3da5160105556cda5dd69f6423f1c32645f6730d32de7773d0c4"
-            }
-          ]
-        },
-        {
-          "path": "config.json",
-          "size_bytes": 1505,
-          "sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/config.json.part-001-of-001",
-              "size_bytes": 1505,
-              "sha256": "bec4b3d446efa05807365c9e1cec03ac590836879d02f3a6da879971154bdd3b"
-            }
-          ]
-        },
-        {
-          "path": "generation_config.json",
-          "size_bytes": 269,
-          "sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/generation_config.json.part-001-of-001",
-              "size_bytes": 269,
-              "sha256": "1e241830b48b397cb0900101421df5450baddc7adf01e5fc86b5615865f3bae4"
-            }
-          ]
-        },
-        {
-          "path": "merges.txt",
-          "size_bytes": 1671839,
-          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/merges.txt.part-001-of-001",
-              "size_bytes": 1671839,
-              "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
-            }
-          ]
-        },
+      "xmodel": {
+        "path": "xmodel.zip",
+        "format": "zip",
+        "size_bytes": 11538540,
+        "sha256": "94dadf9b8bbfdcdee94a72cd2d2d6e0b32332c0faf6ddf0d74f63838fc587afd",
+        "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel.zip"
+      },
+      "weights": [
         {
           "path": "model.safetensors",
           "size_bytes": 4255140312,
@@ -89,186 +48,6 @@
               "sha256": "2041edea7ca10f07a150791c20d6201719cda24452473097fa47e670e1f8ab3f"
             }
           ]
-        },
-        {
-          "path": "preprocessor_config.json",
-          "size_bytes": 390,
-          "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/preprocessor_config.json.part-001-of-001",
-              "size_bytes": 390,
-              "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer.json",
-          "size_bytes": 7032403,
-          "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/tokenizer.json.part-001-of-001",
-              "size_bytes": 7032403,
-              "sha256": "a5d85b6dcc535e6b93115a9ef287e6132fdbf30270da6218194ba742261173c7"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer_config.json",
-          "size_bytes": 10868,
-          "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/tokenizer_config.json.part-001-of-001",
-              "size_bytes": 10868,
-              "sha256": "c2da771801886ad9ae98181793ffd3dfb7f1af30f6f7c6a4e15d7dbba52e2399"
-            }
-          ]
-        },
-        {
-          "path": "video_preprocessor_config.json",
-          "size_bytes": 385,
-          "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/video_preprocessor_config.json.part-001-of-001",
-              "size_bytes": 385,
-              "sha256": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13"
-            }
-          ]
-        },
-        {
-          "path": "vocab.json",
-          "size_bytes": 2776833,
-          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/vocab.json.part-001-of-001",
-              "size_bytes": 2776833,
-              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/model.json",
-          "size_bytes": 1098,
-          "sha256": "9ec68b4741398b3cf8e38ec5e1f8deb19d6c9b9824208bff278af077bfb1dbd7",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fmodel.json.part-001-of-001",
-              "size_bytes": 1098,
-              "sha256": "9ec68b4741398b3cf8e38ec5e1f8deb19d6c9b9824208bff278af077bfb1dbd7"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/profiles/tensorrt_bf16.json",
-          "size_bytes": 267,
-          "sha256": "b7a5d4c6f794012c5270ad800d258d77e9438f68792dcf1631886bf709c3daf5",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fprofiles_2Ftensorrt_bf16.json.part-001-of-001",
-              "size_bytes": 267,
-              "sha256": "b7a5d4c6f794012c5270ad800d258d77e9438f68792dcf1631886bf709c3daf5"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_llm.x",
-          "size_bytes": 5764,
-          "sha256": "d20db5d4fad2b9ca0b1973d154ef14787ebb20fe31d05f4ef6ca3efe9a40f645",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fqwen_llm.x.part-001-of-001",
-              "size_bytes": 5764,
-              "sha256": "d20db5d4fad2b9ca0b1973d154ef14787ebb20fe31d05f4ef6ca3efe9a40f645"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_text_decode.x",
-          "size_bytes": 4429,
-          "sha256": "c5aba80ce1513a7b759cd20751faf6ab6744c339a8b943d2818ece2b37e7c7a9",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fqwen_text_decode.x.part-001-of-001",
-              "size_bytes": 4429,
-              "sha256": "c5aba80ce1513a7b759cd20751faf6ab6744c339a8b943d2818ece2b37e7c7a9"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_text_decode_batch.x",
-          "size_bytes": 4649,
-          "sha256": "0abadb59848e85428f796bb4a38b3e8bce670e1af664971b6e099e20a07515a4",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fqwen_text_decode_batch.x.part-001-of-001",
-              "size_bytes": 4649,
-              "sha256": "0abadb59848e85428f796bb4a38b3e8bce670e1af664971b6e099e20a07515a4"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_text_prefill.x",
-          "size_bytes": 4377,
-          "sha256": "a1119af54315abde5ee628dfda1c0a2dc931f491efdebdbb0f8b10b78673162d",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fqwen_text_prefill.x.part-001-of-001",
-              "size_bytes": 4377,
-              "sha256": "a1119af54315abde5ee628dfda1c0a2dc931f491efdebdbb0f8b10b78673162d"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_vl_model.x",
-          "size_bytes": 3487,
-          "sha256": "556b438ae03c3b9ee5720bf7b00c9ae3b17a50bcefe43fc2ec75cf89f58f57d8",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fqwen_vl_model.x.part-001-of-001",
-              "size_bytes": 3487,
-              "sha256": "556b438ae03c3b9ee5720bf7b00c9ae3b17a50bcefe43fc2ec75cf89f58f57d8"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_vl_prefill.x",
-          "size_bytes": 3227,
-          "sha256": "3e0530f5a1c4dfa3fd6fc25fb56c3b9c77ba55cb9bf34cb66c8017691dc13260",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fqwen_vl_prefill.x.part-001-of-001",
-              "size_bytes": 3227,
-              "sha256": "3e0530f5a1c4dfa3fd6fc25fb56c3b9c77ba55cb9bf34cb66c8017691dc13260"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/vision_encoder.x",
-          "size_bytes": 6096,
-          "sha256": "b3dac0dd83bca9a0a46c8b79d8d88195ab23916338c1e1b5033707ffe1e10045",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fvision_encoder.x.part-001-of-001",
-              "size_bytes": 6096,
-              "sha256": "b3dac0dd83bca9a0a46c8b79d8d88195ab23916338c1e1b5033707ffe1e10045"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/vl_adapter.x",
-          "size_bytes": 2890,
-          "sha256": "7736c7692dea5950e82dfc9355a3030ebc78929c6595e466f7f68bd5ac3e47dd",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/vlm/qwen3-vl-2b-instruct/v1.0.0/xmodel_2Fvl_adapter.x.part-001-of-001",
-              "size_bytes": 2890,
-              "sha256": "7736c7692dea5950e82dfc9355a3030ebc78929c6595e466f7f68bd5ac3e47dd"
-            }
-          ]
         }
       ]
     },
@@ -281,50 +60,21 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 4079436490
+        "weights_bytes": 4063515592
       },
       "license": {
         "spdx": "Apache-2.0",
         "upstream": "https://huggingface.co/Qwen/Qwen3-1.7B"
       },
       "release_tag": "garnet/text/qwen3-1.7b/v1.0.0",
-      "files": [
-        {
-          "path": "config.json",
-          "size_bytes": 726,
-          "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/config.json.part-001-of-001",
-              "size_bytes": 726,
-              "sha256": "1ddb5b89ebc90dcb417a45c213d818577e65976454d29385c8f6140771d95197"
-            }
-          ]
-        },
-        {
-          "path": "generation_config.json",
-          "size_bytes": 239,
-          "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/generation_config.json.part-001-of-001",
-              "size_bytes": 239,
-              "sha256": "2325da0f15bb848e018c5ae071b7943332e9f871d6b60e2ed22ca97d4cb993d2"
-            }
-          ]
-        },
-        {
-          "path": "merges.txt",
-          "size_bytes": 1671853,
-          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/merges.txt.part-001-of-001",
-              "size_bytes": 1671853,
-              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
-            }
-          ]
-        },
+      "xmodel": {
+        "path": "xmodel.zip",
+        "format": "zip",
+        "size_bytes": 15922640,
+        "sha256": "1f7ddcd74b7cbaf5b2f0b3af9609e5cdadbd9445596d24ba4716757135f6e35e",
+        "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel.zip"
+      },
+      "weights": [
         {
           "path": "model-00001-of-00002.safetensors",
           "size_bytes": 3441185608,
@@ -348,153 +98,9 @@
           "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9",
           "parts": [
             {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/model-00002-of-00002.safetensors.part-001-of-001",
+              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/model-00002-of-00002.safetensors",
               "size_bytes": 622329984,
               "sha256": "912becff8d60672aa8628ef08c05898d9adf17c2ad4ae3caf99b065622fdeff9"
-            }
-          ]
-        },
-        {
-          "path": "model.safetensors.index.json",
-          "size_bytes": 25605,
-          "sha256": "0d660e94b165eb912669a5249dff44b83188c4777a07ddb9611fb78d91b0578d",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/model.safetensors.index.json.part-001-of-001",
-              "size_bytes": 25605,
-              "sha256": "0d660e94b165eb912669a5249dff44b83188c4777a07ddb9611fb78d91b0578d"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer.json",
-          "size_bytes": 11422654,
-          "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/tokenizer.json.part-001-of-001",
-              "size_bytes": 11422654,
-              "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer_config.json",
-          "size_bytes": 9732,
-          "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/tokenizer_config.json.part-001-of-001",
-              "size_bytes": 9732,
-              "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
-            }
-          ]
-        },
-        {
-          "path": "vocab.json",
-          "size_bytes": 2776833,
-          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/vocab.json.part-001-of-001",
-              "size_bytes": 2776833,
-              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/decode.x",
-          "size_bytes": 2983,
-          "sha256": "22c099bbeafd75f7815c9fba7a48a365efc73a0249580baa7b80a71a0703a749",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fdecode.x.part-001-of-001",
-              "size_bytes": 2983,
-              "sha256": "22c099bbeafd75f7815c9fba7a48a365efc73a0249580baa7b80a71a0703a749"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/decode_batch.x",
-          "size_bytes": 3218,
-          "sha256": "d30817c7ec7185ee45d0ed5e2ffe0641c5bc01dd5141cd06f4732bc7eab53f4f",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fdecode_batch.x.part-001-of-001",
-              "size_bytes": 3218,
-              "sha256": "d30817c7ec7185ee45d0ed5e2ffe0641c5bc01dd5141cd06f4732bc7eab53f4f"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/model.json",
-          "size_bytes": 942,
-          "sha256": "ad4b6b0e0569ac43602f2c92adde8b591f12d90da84b97882b35460fe8a06e5a",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fmodel.json.part-001-of-001",
-              "size_bytes": 942,
-              "sha256": "ad4b6b0e0569ac43602f2c92adde8b591f12d90da84b97882b35460fe8a06e5a"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/prefill.x",
-          "size_bytes": 3190,
-          "sha256": "16f4dd15ea7ddf0361c02e828da21d023aeabc43bcecfacace54fca10a030c44",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fprefill.x.part-001-of-001",
-              "size_bytes": 3190,
-              "sha256": "16f4dd15ea7ddf0361c02e828da21d023aeabc43bcecfacace54fca10a030c44"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/profiles/openvino_cpu_int4.json",
-          "size_bytes": 338,
-          "sha256": "6f37e1dd4fe57c20801d06e96b214748f8145eed7489f4876d818aaa5aeace7b",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fprofiles_2Fopenvino_cpu_int4.json.part-001-of-001",
-              "size_bytes": 338,
-              "sha256": "6f37e1dd4fe57c20801d06e96b214748f8145eed7489f4876d818aaa5aeace7b"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/profiles/tensorrt_bf16.json",
-          "size_bytes": 267,
-          "sha256": "b7a5d4c6f794012c5270ad800d258d77e9438f68792dcf1631886bf709c3daf5",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fprofiles_2Ftensorrt_bf16.json.part-001-of-001",
-              "size_bytes": 267,
-              "sha256": "b7a5d4c6f794012c5270ad800d258d77e9438f68792dcf1631886bf709c3daf5"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_llm.x",
-          "size_bytes": 1707,
-          "sha256": "c919f0a3a763c3e1d464f4586fe3ebdc0d70acfd359241be0f8d4dfed380c1a3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2Fqwen_llm.x.part-001-of-001",
-              "size_bytes": 1707,
-              "sha256": "c919f0a3a763c3e1d464f4586fe3ebdc0d70acfd359241be0f8d4dfed380c1a3"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/README.md",
-          "size_bytes": 611,
-          "sha256": "94c7d8660825e3f56ee0ee2bf7d86ca7bfb7ed7f8287621d67627364dc90bf19",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/text/qwen3-1.7b/v1.0.0/xmodel_2FREADME.md.part-001-of-001",
-              "size_bytes": 611,
-              "sha256": "94c7d8660825e3f56ee0ee2bf7d86ca7bfb7ed7f8287621d67627364dc90bf19"
             }
           ]
         }
@@ -509,191 +115,30 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 1892003151
+        "weights_bytes": 1876091704
       },
       "license": {
         "spdx": "Apache-2.0",
         "upstream": "https://huggingface.co/Qwen/Qwen3-ASR-0.6B"
       },
       "release_tag": "garnet/asr/qwen3-asr-0.6b/v1.0.0",
-      "files": [
-        {
-          "path": "chat_template.json",
-          "size_bytes": 1161,
-          "sha256": "75a8cfca24f00de72d796fbfed6858fc9614ef3dabd8696684cc3bc03a9c58ff",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/chat_template.json.part-001-of-001",
-              "size_bytes": 1161,
-              "sha256": "75a8cfca24f00de72d796fbfed6858fc9614ef3dabd8696684cc3bc03a9c58ff"
-            }
-          ]
-        },
-        {
-          "path": "config.json",
-          "size_bytes": 6193,
-          "sha256": "76d3ae4601ce939830b2517f4a6cadb86cc51316c3900af6b020b051c21a478c",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/config.json.part-001-of-001",
-              "size_bytes": 6193,
-              "sha256": "76d3ae4601ce939830b2517f4a6cadb86cc51316c3900af6b020b051c21a478c"
-            }
-          ]
-        },
-        {
-          "path": "generation_config.json",
-          "size_bytes": 142,
-          "sha256": "1da527824d81e07118facff437e03f2e24a23311e3bdeb2368973fe77e5f275c",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/generation_config.json.part-001-of-001",
-              "size_bytes": 142,
-              "sha256": "1da527824d81e07118facff437e03f2e24a23311e3bdeb2368973fe77e5f275c"
-            }
-          ]
-        },
-        {
-          "path": "merges.txt",
-          "size_bytes": 1671853,
-          "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/merges.txt.part-001-of-001",
-              "size_bytes": 1671853,
-              "sha256": "8831e4f1a044471340f7c0a83d7bd71306a5b867e95fd870f74d0c5308a904d5"
-            }
-          ]
-        },
+      "xmodel": {
+        "path": "xmodel.zip",
+        "format": "zip",
+        "size_bytes": 15913043,
+        "sha256": "f1ef652ed7eefe7099046f813c602b7c3f7cc88e0a474910883d6b123f05508c",
+        "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel.zip"
+      },
+      "weights": [
         {
           "path": "model.safetensors",
           "size_bytes": 1876091704,
           "sha256": "79d6cbd4c98c7bbffe9db2edac07f56cd6637d0d5944b27f6c2b8353840323ea",
           "parts": [
             {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/model.safetensors.part-001-of-001",
+              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/model.safetensors",
               "size_bytes": 1876091704,
               "sha256": "79d6cbd4c98c7bbffe9db2edac07f56cd6637d0d5944b27f6c2b8353840323ea"
-            }
-          ]
-        },
-        {
-          "path": "preprocessor_config.json",
-          "size_bytes": 330,
-          "sha256": "45e120a4eda2c20c5d7f2ea9354e63536bf35e27aa573fb7cdf78017b378770d",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/preprocessor_config.json.part-001-of-001",
-              "size_bytes": 330,
-              "sha256": "45e120a4eda2c20c5d7f2ea9354e63536bf35e27aa573fb7cdf78017b378770d"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer.json",
-          "size_bytes": 11429653,
-          "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/tokenizer.json.part-001-of-001",
-              "size_bytes": 11429653,
-              "sha256": "fe1fad59be22a41ee293363fcf95fdedbc7c93f3b49270b1d2e18bd1399a7a05"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer_config.json",
-          "size_bytes": 12487,
-          "sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/tokenizer_config.json.part-001-of-001",
-              "size_bytes": 12487,
-              "sha256": "4942d005604266809309cabc9f4e9cb89ce855d59b14681fdc0e1cc62ea26c4c"
-            }
-          ]
-        },
-        {
-          "path": "vocab.json",
-          "size_bytes": 2776833,
-          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/vocab.json.part-001-of-001",
-              "size_bytes": 2776833,
-              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/audio_encoder.x",
-          "size_bytes": 3066,
-          "sha256": "d7f71d49719cb9abf8cdab6d97f5e61f4055569c91d13d9bbc601c21a17d0814",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel_2Faudio_encoder.x.part-001-of-001",
-              "size_bytes": 3066,
-              "sha256": "d7f71d49719cb9abf8cdab6d97f5e61f4055569c91d13d9bbc601c21a17d0814"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/decode.x",
-          "size_bytes": 2989,
-          "sha256": "311c6fff38ac71103a4f2a5938e07437358c212711867990a65126f496caebe8",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel_2Fdecode.x.part-001-of-001",
-              "size_bytes": 2989,
-              "sha256": "311c6fff38ac71103a4f2a5938e07437358c212711867990a65126f496caebe8"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/model.json",
-          "size_bytes": 844,
-          "sha256": "b61f6655b90bf073f929b48d91bde0a2b3e1f97b595779f63ca538e5ab0fd619",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel_2Fmodel.json.part-001-of-001",
-              "size_bytes": 844,
-              "sha256": "b61f6655b90bf073f929b48d91bde0a2b3e1f97b595779f63ca538e5ab0fd619"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/prefill.x",
-          "size_bytes": 3747,
-          "sha256": "1614eecb02f5f37ed20691b5bc79d6192843033cbd78fe11141b8cb4e2b9827c",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel_2Fprefill.x.part-001-of-001",
-              "size_bytes": 3747,
-              "sha256": "1614eecb02f5f37ed20691b5bc79d6192843033cbd78fe11141b8cb4e2b9827c"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/profiles/tensorrt_bf16.json",
-          "size_bytes": 355,
-          "sha256": "b5b14716efbb6520909b4895f79ef5a39f25b497681a0a753ec0ce44cf897be3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel_2Fprofiles_2Ftensorrt_bf16.json.part-001-of-001",
-              "size_bytes": 355,
-              "sha256": "b5b14716efbb6520909b4895f79ef5a39f25b497681a0a753ec0ce44cf897be3"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/qwen_asr_llm.x",
-          "size_bytes": 1794,
-          "sha256": "fb1203f1fd7ea47deb289b7cbbe1a627a8a21fa9e3ae2cc28e416b55f9a91edd",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/asr/qwen3-asr-0.6b/v1.0.0/xmodel_2Fqwen_asr_llm.x.part-001-of-001",
-              "size_bytes": 1794,
-              "sha256": "fb1203f1fd7ea47deb289b7cbbe1a627a8a21fa9e3ae2cc28e416b55f9a91edd"
             }
           ]
         }
@@ -708,95 +153,30 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 2498404000
+        "weights_bytes": 2493919668
       },
       "license": {
         "spdx": "Apache-2.0",
         "upstream": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice"
       },
       "release_tag": "garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0",
-      "files": [
-        {
-          "path": "config.json",
-          "size_bytes": 4908,
-          "sha256": "81aca2b6fac304944d8acf345272d8a9a727d5fc2e2e66b222ab4729340c7455",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/config.json.part-001-of-001",
-              "size_bytes": 4908,
-              "sha256": "81aca2b6fac304944d8acf345272d8a9a727d5fc2e2e66b222ab4729340c7455"
-            }
-          ]
-        },
-        {
-          "path": "generation_config.json",
-          "size_bytes": 245,
-          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/generation_config.json.part-001-of-001",
-              "size_bytes": 245,
-              "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa"
-            }
-          ]
-        },
-        {
-          "path": "merges.txt",
-          "size_bytes": 1671839,
-          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/merges.txt.part-001-of-001",
-              "size_bytes": 1671839,
-              "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
-            }
-          ]
-        },
+      "xmodel": {
+        "path": "xmodel.zip",
+        "format": "zip",
+        "size_bytes": 4486298,
+        "sha256": "40dff69bdb62974342518ea2529e8ac9409744131ccffd3b7bbd20bd8589ec88",
+        "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel.zip"
+      },
+      "weights": [
         {
           "path": "model.safetensors",
           "size_bytes": 1811626576,
           "sha256": "bc3c7e785eb961179c25450d1acff03f839e0002f2f3a5aeb67b5735c0fa2adb",
           "parts": [
             {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/model.safetensors.part-001-of-001",
+              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/model.safetensors",
               "size_bytes": 1811626576,
               "sha256": "bc3c7e785eb961179c25450d1acff03f839e0002f2f3a5aeb67b5735c0fa2adb"
-            }
-          ]
-        },
-        {
-          "path": "preprocessor_config.json",
-          "size_bytes": 127,
-          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/preprocessor_config.json.part-001-of-001",
-              "size_bytes": 127,
-              "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119"
-            }
-          ]
-        },
-        {
-          "path": "speech_tokenizer/config.json",
-          "size_bytes": 2336,
-          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/speech_tokenizer_2Fconfig.json.part-001-of-001",
-              "size_bytes": 2336,
-              "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167"
-            }
-          ]
-        },
-        {
-          "path": "speech_tokenizer/configuration.json",
-          "size_bytes": 76,
-          "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/speech_tokenizer_2Fconfiguration.json.part-001-of-001",
-              "size_bytes": 76,
-              "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd"
             }
           ]
         },
@@ -806,129 +186,9 @@
           "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
           "parts": [
             {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/speech_tokenizer_2Fmodel.safetensors.part-001-of-001",
+              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/speech_tokenizer_2Fmodel.safetensors",
               "size_bytes": 682293092,
               "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
-            }
-          ]
-        },
-        {
-          "path": "speech_tokenizer/preprocessor_config.json",
-          "size_bytes": 234,
-          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/speech_tokenizer_2Fpreprocessor_config.json.part-001-of-001",
-              "size_bytes": 234,
-              "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer_config.json",
-          "size_bytes": 7344,
-          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/tokenizer_config.json.part-001-of-001",
-              "size_bytes": 7344,
-              "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670"
-            }
-          ]
-        },
-        {
-          "path": "vocab.json",
-          "size_bytes": 2776833,
-          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/vocab.json.part-001-of-001",
-              "size_bytes": 2776833,
-              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/code_predictor.x",
-          "size_bytes": 3875,
-          "sha256": "546d5c408eca8024fb4a27bcc38a9141a0938e8156bc1c52c3f94aff9225f707",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Fcode_predictor.x.part-001-of-001",
-              "size_bytes": 3875,
-              "sha256": "546d5c408eca8024fb4a27bcc38a9141a0938e8156bc1c52c3f94aff9225f707"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/codec_decode.x",
-          "size_bytes": 5784,
-          "sha256": "65f82b0cdb056b684f48908c82279a37b145785241bc66a033221fd6725a6af3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Fcodec_decode.x.part-001-of-001",
-              "size_bytes": 5784,
-              "sha256": "65f82b0cdb056b684f48908c82279a37b145785241bc66a033221fd6725a6af3"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/model.json",
-          "size_bytes": 1191,
-          "sha256": "8a403299d8d0434c23ea94550b4c15dd6fc9a06391d7e9b4746d6e4146d371c9",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Fmodel.json.part-001-of-001",
-              "size_bytes": 1191,
-              "sha256": "8a403299d8d0434c23ea94550b4c15dd6fc9a06391d7e9b4746d6e4146d371c9"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/profiles/tensorrt_bf16.json",
-          "size_bytes": 498,
-          "sha256": "f50cd1f6ee3526ad90857997bb27bdd0c0dc4bc139dd959e2092e9b545362ae6",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Fprofiles_2Ftensorrt_bf16.json.part-001-of-001",
-              "size_bytes": 498,
-              "sha256": "f50cd1f6ee3526ad90857997bb27bdd0c0dc4bc139dd959e2092e9b545362ae6"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/talker_common.x",
-          "size_bytes": 3094,
-          "sha256": "18e3d9a56124f12fc63d433233b3806291a68383e1263b02a368dbfd999a6c5b",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Ftalker_common.x.part-001-of-001",
-              "size_bytes": 3094,
-              "sha256": "18e3d9a56124f12fc63d433233b3806291a68383e1263b02a368dbfd999a6c5b"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/talker_decode.x",
-          "size_bytes": 2885,
-          "sha256": "81c80d2e9874874b2cf7a5d3f77fab47da2a997239f9b728d5d23b6493bf1214",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Ftalker_decode.x.part-001-of-001",
-              "size_bytes": 2885,
-              "sha256": "81c80d2e9874874b2cf7a5d3f77fab47da2a997239f9b728d5d23b6493bf1214"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/talker_prefill.x",
-          "size_bytes": 3063,
-          "sha256": "b7159a93a4e019142734140eff4504f3aec07f5b89a78ac7d6307f481085806a",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-0.6b-customvoice/v1.0.0/xmodel_2Ftalker_prefill.x.part-001-of-001",
-              "size_bytes": 3063,
-              "sha256": "b7159a93a4e019142734140eff4504f3aec07f5b89a78ac7d6307f481085806a"
             }
           ]
         }
@@ -943,50 +203,21 @@
         "minimum_version": "0.1.0"
       },
       "requirements": {
-        "weights_bytes": 4520180410
+        "weights_bytes": 4515695644
       },
       "license": {
         "spdx": "Apache-2.0",
         "upstream": "https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice"
       },
       "release_tag": "garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0",
-      "files": [
-        {
-          "path": "config.json",
-          "size_bytes": 4908,
-          "sha256": "17a07f527a1c25ea30b4e023a184482a23d3e279d697b1dc81b1bde498d29cf9",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/config.json.part-001-of-001",
-              "size_bytes": 4908,
-              "sha256": "17a07f527a1c25ea30b4e023a184482a23d3e279d697b1dc81b1bde498d29cf9"
-            }
-          ]
-        },
-        {
-          "path": "generation_config.json",
-          "size_bytes": 245,
-          "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/generation_config.json.part-001-of-001",
-              "size_bytes": 245,
-              "sha256": "f1b90b4513f3b34c62851049e2492d7b4c5940daf1276f89c82b8ef04127f3aa"
-            }
-          ]
-        },
-        {
-          "path": "merges.txt",
-          "size_bytes": 1671839,
-          "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/merges.txt.part-001-of-001",
-              "size_bytes": 1671839,
-              "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
-            }
-          ]
-        },
+      "xmodel": {
+        "path": "xmodel.zip",
+        "format": "zip",
+        "size_bytes": 4486732,
+        "sha256": "629ee892c33b68135085d8d6b864a947165d8c9bb1055689703c4da679b92001",
+        "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel.zip"
+      },
+      "weights": [
         {
           "path": "model.safetensors",
           "size_bytes": 3833402552,
@@ -1005,170 +236,14 @@
           ]
         },
         {
-          "path": "preprocessor_config.json",
-          "size_bytes": 127,
-          "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/preprocessor_config.json.part-001-of-001",
-              "size_bytes": 127,
-              "sha256": "efdde1022ea9d76928bf7a9cd53139138f5ba2e466e837f08f6105ab1af1c119"
-            }
-          ]
-        },
-        {
-          "path": "speech_tokenizer/config.json",
-          "size_bytes": 2336,
-          "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/speech_tokenizer_2Fconfig.json.part-001-of-001",
-              "size_bytes": 2336,
-              "sha256": "ee65bb901c876664ab8707c487157aa1a6ee57c65969b28fb5ec9dc211e68167"
-            }
-          ]
-        },
-        {
-          "path": "speech_tokenizer/configuration.json",
-          "size_bytes": 76,
-          "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/speech_tokenizer_2Fconfiguration.json.part-001-of-001",
-              "size_bytes": 76,
-              "sha256": "6bc26d64eb5024b4d1dab5a52371958b429256d6c9d59787f1f5294a54e0cebd"
-            }
-          ]
-        },
-        {
           "path": "speech_tokenizer/model.safetensors",
           "size_bytes": 682293092,
           "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258",
           "parts": [
             {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/speech_tokenizer_2Fmodel.safetensors.part-001-of-001",
+              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/speech_tokenizer_2Fmodel.safetensors",
               "size_bytes": 682293092,
               "sha256": "836b7b357f5ea43e889936a3709af68dfe3751881acefe4ecf0dbd30ba571258"
-            }
-          ]
-        },
-        {
-          "path": "speech_tokenizer/preprocessor_config.json",
-          "size_bytes": 234,
-          "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/speech_tokenizer_2Fpreprocessor_config.json.part-001-of-001",
-              "size_bytes": 234,
-              "sha256": "fcb3805e597e786d4067706e602f6688524640f8d3396790e2e09b5942fcbdfb"
-            }
-          ]
-        },
-        {
-          "path": "tokenizer_config.json",
-          "size_bytes": 7344,
-          "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/tokenizer_config.json.part-001-of-001",
-              "size_bytes": 7344,
-              "sha256": "dc3c31c3bdaedd5016382bb3cbe07323026775ad51f5a4fb564505992ae4a670"
-            }
-          ]
-        },
-        {
-          "path": "vocab.json",
-          "size_bytes": 2776833,
-          "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/vocab.json.part-001-of-001",
-              "size_bytes": 2776833,
-              "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/code_predictor.x",
-          "size_bytes": 4311,
-          "sha256": "c4bb1fba1136ae05c9b1dddda17670b01d85b405b0721c5ec8881f80e7a3e201",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Fcode_predictor.x.part-001-of-001",
-              "size_bytes": 4311,
-              "sha256": "c4bb1fba1136ae05c9b1dddda17670b01d85b405b0721c5ec8881f80e7a3e201"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/codec_decode.x",
-          "size_bytes": 5784,
-          "sha256": "65f82b0cdb056b684f48908c82279a37b145785241bc66a033221fd6725a6af3",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Fcodec_decode.x.part-001-of-001",
-              "size_bytes": 5784,
-              "sha256": "65f82b0cdb056b684f48908c82279a37b145785241bc66a033221fd6725a6af3"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/model.json",
-          "size_bytes": 1190,
-          "sha256": "b8611416a775a9db061dbed0c48e51b9c86b62be0653c3d04707f923a9ec07de",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Fmodel.json.part-001-of-001",
-              "size_bytes": 1190,
-              "sha256": "b8611416a775a9db061dbed0c48e51b9c86b62be0653c3d04707f923a9ec07de"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/profiles/tensorrt_bf16.json",
-          "size_bytes": 497,
-          "sha256": "20a272d9906c96415c0e054b42f09a409dabe8dcafe87c59b5c88b0c21c7212e",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Fprofiles_2Ftensorrt_bf16.json.part-001-of-001",
-              "size_bytes": 497,
-              "sha256": "20a272d9906c96415c0e054b42f09a409dabe8dcafe87c59b5c88b0c21c7212e"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/talker_common.x",
-          "size_bytes": 3094,
-          "sha256": "18e3d9a56124f12fc63d433233b3806291a68383e1263b02a368dbfd999a6c5b",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Ftalker_common.x.part-001-of-001",
-              "size_bytes": 3094,
-              "sha256": "18e3d9a56124f12fc63d433233b3806291a68383e1263b02a368dbfd999a6c5b"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/talker_decode.x",
-          "size_bytes": 2885,
-          "sha256": "81c80d2e9874874b2cf7a5d3f77fab47da2a997239f9b728d5d23b6493bf1214",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Ftalker_decode.x.part-001-of-001",
-              "size_bytes": 2885,
-              "sha256": "81c80d2e9874874b2cf7a5d3f77fab47da2a997239f9b728d5d23b6493bf1214"
-            }
-          ]
-        },
-        {
-          "path": "xmodel/talker_prefill.x",
-          "size_bytes": 3063,
-          "sha256": "b7159a93a4e019142734140eff4504f3aec07f5b89a78ac7d6307f481085806a",
-          "parts": [
-            {
-              "url": "https://github.com/CantorAI/ModelZoo/releases/download/garnet/tts/qwen3-tts-12hz-1.7b-customvoice/v1.0.0/xmodel_2Ftalker_prefill.x.part-001-of-001",
-              "size_bytes": 3063,
-              "sha256": "b7159a93a4e019142734140eff4504f3aec07f5b89a78ac7d6307f481085806a"
             }
           ]
         }

@@ -11,12 +11,15 @@ catalog metadata:
 
 - release tag: `garnet/<capability>/<model-slug>/v<version>`
 - catalog category: `text`, `vlm`, `asr`, or `tts`
-- file paths: reconstructed by Garnet from each asset or split asset set
+- `xmodel`: one `xmodel.zip` containing model metadata and the complete
+  `xmodel/` folder
+- `weights`: only `.safetensors` files, split into numbered parts only when
+  they exceed the GitHub asset threshold
 
 The current catalog covers Qwen3 text, VLM, ASR, and both CustomVoice TTS
-models. Files larger than GitHub's 2 GiB asset limit are split into numbered
-parts; Garnet downloads with range resume, verifies every part, reconstructs
-the original file, and verifies its complete SHA-256 digest.
+models. Garnet downloads with range resume, verifies `xmodel.zip` and every
+weight part, extracts the metadata/XModel archive, reconstructs split weights,
+and verifies each complete SHA-256 digest.
 
 Use `tools/build_garnet_catalog.py --help` to prepare assets and
 `tools/sign_catalog.py --help` to create the detached Ed25519 signature.

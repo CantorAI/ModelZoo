@@ -1,25 +1,31 @@
-# CantorAI ModelZoo 🦓
+# CantorAI ModelZoo
 
-This repository is the central hub for hosting pre-trained models, optimized weights, and AI assets used across the CantorAI ecosystem. 
+ModelZoo is the public artifact registry for models supported by the CantorAI
+Garnet runtime. The Git repository contains manifests and packaging tools;
+large weight files are GitHub Release assets and are never committed to Git.
 
-Because many models require massive data files (often exceeding GitHub's 100MB file limit), the core repository acts as a lightweight index. The actual model binaries are distributed as packaged archives on the **[Releases](../../releases)** page.
+## Garnet catalog
 
-## 📦 Getting Started
+GitHub Release assets are flat. ModelZoo supplies hierarchy through signed
+catalog metadata:
 
-To download models for deployment:
-1. Navigate to the [Releases](../../releases) page.
-2. Download the ZIP or TAR archive for the specific model suite you need (e.g., `xworld_onnx_models_small_v1.zip`).
-3. Extract the contents directly into your application's `models/` directory.
+- release tag: `garnet/<capability>/<model-slug>/v<version>`
+- catalog category: `text`, `vlm`, `asr`, or `tts`
+- `xmodel`: one `xmodel.zip` containing model metadata and the complete
+  `xmodel/` folder
+- `weights`: only `.safetensors` files, split into numbered parts only when
+  they exceed the GitHub asset threshold
 
-## ⚙️ Model Formats
+The current catalog covers Qwen3 text, VLM, ASR, and both CustomVoice TTS
+models. Garnet downloads with range resume, verifies `xmodel.zip` and every
+weight part, extracts the metadata/XModel archive, reconstructs split weights,
+and verifies each complete SHA-256 digest.
 
-The ModelZoo hosts various architectures tailored for different deployment targets:
-- **`.onnx`**: Framework-agnostic graphs ready to be compiled into hardware-specific TensorRT `.engine` files.
-- **`.pth` / `.pt`**: Native PyTorch checkpoints for fine-tuning or direct inference.
-- **`.safetensors`**: Secure, fast-loading weight formats for Large Language Models.
+Use `tools/build_garnet_catalog.py --help` to prepare assets and
+`tools/sign_catalog.py --help` to create the detached Ed25519 signature.
 
-## ⚖️ Licensing
+## Licensing
 
-Models hosted in this repository are converted or fine-tuned from open-source baselines. Unless otherwise specified in a specific release, the models are distributed under the permissive **[Apache 2.0 License](LICENSE)**.
-
-When using these models, please respect the original licenses of the foundational architectures (e.g., Google SigLIP, Megvii YOLOX, Qwen, etc.).
+Catalog metadata and repository tooling are Apache-2.0. Every model entry
+retains its upstream license and attribution. Garnet runtime binaries have a
+separate CantorAI evaluation/commercial license.

@@ -75,14 +75,21 @@ def main() -> None:
     parser.add_argument("--priority", type=int, default=0)
     parser.add_argument("--cuda-bin", type=Path, required=True)
     parser.add_argument("--tensorrt-bin", type=Path, required=True)
-    parser.add_argument("--redistribution-license", type=Path, required=True)
+    parser.add_argument(
+        "--redistribution-license",
+        type=Path,
+        action="append",
+        required=True,
+        help="Approved NVIDIA license/notice file; repeat for CUDA and TensorRT",
+    )
     parser.add_argument("--release-base-url", required=True)
     parser.add_argument("--output", type=Path, default=Path("dist/acceleration"))
     args = parser.parse_args()
 
-    license_path = args.redistribution_license.resolve()
-    if not license_path.is_file():
-        raise FileNotFoundError(license_path)
+    license_paths = [path.resolve() for path in args.redistribution_license]
+    for license_path in license_paths:
+        if not license_path.is_file():
+            raise FileNotFoundError(license_path)
     package_id = f"nvidia-windows-x64-cuda13.2-trt10-sm{args.sm}"
     args.output.mkdir(parents=True, exist_ok=True)
     archive = args.output / f"{package_id}-{args.version}.zip"
@@ -96,7 +103,13 @@ def main() -> None:
         resource = SM_RESOURCES[args.sm]
         for name in [*TENSORRT_FILES, resource]:
             shutil.copy2(require_file(args.tensorrt_bin, name), binary / name)
-        shutil.copy2(license_path, root / "NVIDIA-REDISTRIBUTION-LICENSE.txt")
+        notices = root / "licenses"
+        notices.mkdir()
+        for index, license_path in enumerate(license_paths, start=1):
+            shutil.copy2(
+                license_path,
+                notices / f"{index:02d}-{license_path.name}",
+            )
         with zipfile.ZipFile(archive, "w", compression=zipfile.ZIP_STORED) as bundle:
             for file in sorted(root.rglob("*")):
                 if file.is_file():
@@ -117,14 +130,13 @@ def main() -> None:
             "cuda": "13.2",
             "tensorrt": "10",
         },
-        "xmodel": {
-            "path": "xmodel.zip",
+        "runtime": {
+            "path": "runtime.zip",
             "format": "zip",
             "size_bytes": archive.stat().st_size,
             "sha256": sha256(archive),
             "url": f"{release_base}/{archive.name}",
         },
-        "weights": [],
         "runtime_libraries": LOAD_ORDER,
     }
     entry_path = args.output / f"{package_id}-{args.version}.catalog-entry.json"

@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "channel": "stable",
+  "models": [
+    {
+      "id": "nvidia-windows-x64-cuda13.2-trt10-sm89",
+      "version": "1.0.0",
+      "display_name": "NVIDIA CUDA 13.2 / TensorRT 10 (SM 89)",
+      "capability": "acceleration",
+      "acceleration": {
+        "vendor": "nvidia",
+        "platforms": ["windows-x64"],
+        "minimum_driver_api": 13000,
+        "priority": 100,
+        "compute_capabilities": ["8.9"],
+        "cuda": "13.2",
+        "tensorrt": "10"
+      },
+      "runtime": {
+        "path": "runtime.zip",
+        "format": "zip",
+        "size_bytes": 1762208641,
+        "sha256": "92e437d789a3aa051fedf6ebab5e4a2c71f772c44dcb1baa198aa9e7b943a04d",
+        "url": "https://github.com/CantorAI/GarnetSDK/releases/download/acceleration-catalog-v1/nvidia-windows-x64-cuda13.2-trt10-sm89-1.0.0.zip"
+      },
+      "runtime_libraries": [
+        "bin/cudart64_13.dll",
+        "bin/cublasLt64_13.dll",
+        "bin/cublas64_13.dll",
+        "bin/nppc64_13.dll",
+        "bin/nppig64_13.dll",
+        "bin/nvjpeg64_13.dll",
+        "bin/nvinfer_10.dll",
+        "bin/nvinfer_plugin_10.dll"
+      ]
+    }
+  ]
+}

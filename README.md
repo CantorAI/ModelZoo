@@ -28,10 +28,15 @@ Use `tools/build_garnet_catalog.py --help` to prepare assets and
 
 `tools/build_acceleration_pack.py` assembles a Windows, NVIDIA-SM-specific
 stored ZIP and emits its catalog entry. The tool requires an explicit approved
-redistribution-license file and never uploads or signs artifacts. Combine the
+redistribution-license files (one each for CUDA and TensorRT) and never uploads
+or signs artifacts. Combine the
 entries into `catalog/accelerations-v1.json`, sign it with the normal catalog
 signer, and publish the ZIPs as release assets only after CUDA and TensorRT
 redistribution rights have been confirmed.
+
+Acceleration entries use a dedicated `runtime` object pointing to
+`runtime.zip`. They do not use the model catalog's `xmodel` or `weights`
+fields.
 
 ## Licensing
 
